@@ -14,9 +14,3 @@ lastName, firstName
     on c.salesRepEmployeeNumber=e.employeeNumber
 GROUP BY orderDate
 ORDER BY orderDate, turnover DESC);
-
-#requete a faire sur Grafana
-SELECT turnover, year(orderDate) as orderYear, month(orderDate) as orderMonth, salesRepEmployeeNumber,lastName, firstName
-FROM `turnover`
-WHERE orderDate BETWEEN DATE '2018-09-01' and '2018-09-30'
-ORDER BY turnover DESC;
